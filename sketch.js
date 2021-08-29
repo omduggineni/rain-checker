@@ -1,11 +1,19 @@
 let raindrops = [];
-function setup() { 
-  createCanvas(windowWidth, windowHeight); 
+let song;
+function preload(){
+  song = loadSound('noise.mp3');
+}
+function setup() {
+  createCanvas(windowWidth, windowHeight);
   for(var i = 0; i < 500; i++){
-    raindrops.push([random()*windowWidth, random()*windowHeight, random()*10+10]) 
+    raindrops.push([random()*windowWidth, random()*windowHeight, random()*10+10])
   }
 }
 function draw() {
+  if(!song.isPlaying()){
+    song.play()
+  }
+
   resizeCanvas(windowWidth, windowHeight);
   background(50);
   fill("#FFFFFF")
