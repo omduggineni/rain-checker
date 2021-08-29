@@ -26,7 +26,7 @@ function draw() {
   for(var i = 0; i < 10; i++){
     raindrops.push([random()*windowWidth, 0, random()*random()*30+15])
   }
-  raindrops.filter(x => x[1] < windowHeight)
+  raindrops = raindrops.filter(x => x[1] < windowHeight)
 }
 function mousePressed() {
   console.log("mouse pressed")
