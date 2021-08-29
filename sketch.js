@@ -28,3 +28,8 @@ function draw() {
   }
   raindrops.filter(x => x[1] < windowHeight)
 }
+function mousePressed() {
+  if(!song.isPlaying()){
+    song.play()
+  }
+}
