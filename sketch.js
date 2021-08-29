@@ -6,7 +6,7 @@ function preload(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   for(var i = 0; i < 500; i++){
-    raindrops.push([random()*windowWidth, random()*windowHeight, random()*10+10])
+    raindrops.push([random()*windowWidth, random()*windowHeight, random()*15+15])
   }
 }
 function draw() {
@@ -24,7 +24,7 @@ function draw() {
     raindrops[i][1] += raindrops[i][2];
   }
   for(var i = 0; i < 10; i++){
-    raindrops.push([random()*windowWidth, 0, random()*random()*20+10])
+    raindrops.push([random()*windowWidth, 0, random()*random()*30+15])
   }
   raindrops.filter(x => x[1] < windowHeight)
 }
