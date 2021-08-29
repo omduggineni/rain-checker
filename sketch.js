@@ -29,5 +29,7 @@ function draw() {
   raindrops.filter(x => x[1] < windowHeight)
 }
 function mousePressed() {
+  console.log("mouse pressed")
+  song.stop()
   song.play()
 }
