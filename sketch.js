@@ -1,0 +1,22 @@
+let raindrops = [];
+function setup() { 
+  createCanvas(windowWidth, windowHeight); 
+  for(var i = 0; i < 500; i++){
+    raindrops.push([random()*windowWidth, random()*windowHeight, random()*10+10]) 
+  }
+}
+function draw() {
+  resizeCanvas(windowWidth, windowHeight);
+  background(50);
+  fill("#FFFFFF")
+  stroke("#FFFFFF")
+  text("it is raining", 20, 360)
+  for(var i = 0; i < raindrops.length; i++){
+    line(raindrops[i][0], raindrops[i][1], raindrops[i][0], raindrops[i][1]+10)
+    raindrops[i][1] += raindrops[i][2];
+  }
+  for(var i = 0; i < 10; i++){
+    raindrops.push([random()*windowWidth, 0, random()*random()*20+10])
+  }
+  raindrops.filter(x => x[1] < windowHeight)
+}
