@@ -10,7 +10,7 @@ function draw() {
   background(50);
   fill("#FFFFFF")
   stroke("#FFFFFF")
-  text("it is raining", 20, 360)
+  text("it is raining", 20, windowHeight-20)
   for(var i = 0; i < raindrops.length; i++){
     line(raindrops[i][0], raindrops[i][1], raindrops[i][0], raindrops[i][1]+10)
     raindrops[i][1] += raindrops[i][2];
